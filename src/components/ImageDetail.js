@@ -1,7 +1,13 @@
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View, Image } from 'react-native';
 
-function ImageDetail(props) {
-  return <Text>Image Detail</Text>;
+function ImageDetail({ title, image, score }) {
+  return (
+    <View>
+      <Image source={image} />
+      <Text>{title}</Text>
+      <Text>Image Score: {score}</Text>
+    </View>
+  );
 }
 
 export default ImageDetail;
