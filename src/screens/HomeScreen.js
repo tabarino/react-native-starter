@@ -20,6 +20,11 @@ function HomeScreen(props) {
         onPress={() => props.navigation.navigate('Counter')}>
         <Text>Go to Counter Screen</Text>
       </Pressable>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={() => props.navigation.navigate('Color')}>
+        <Text>Go to Color Screen</Text>
+      </Pressable>
     </View>
   );
 }
