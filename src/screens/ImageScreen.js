@@ -1,7 +1,14 @@
-import { Text, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import ImageDetail from '../components/ImageDetail';
 
 function ImageScreen(props) {
-  return <Text>Image Screen</Text>;
+  return (
+    <View>
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+    </View>
+  );
 }
 
 export default ImageScreen;
