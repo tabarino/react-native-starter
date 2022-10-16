@@ -1,7 +1,6 @@
-import React from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
+import { FlatList, Text, StyleSheet } from 'react-native';
 
-function ListScreen(props) {
+function ListScreen() {
   const friends = [
     { name: 'Friend #1', age: 20 },
     { name: 'Friend #2', age: 21 },

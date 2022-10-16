@@ -1,7 +1,6 @@
-import React from 'react';
 import { Button, Pressable, StyleSheet, Text, View } from 'react-native';
 
-const HomeScreen = (props) => {
+function HomeScreen(props) {
   return (
     <View>
       <Text style={styles.text}>Home Screen</Text>
@@ -9,9 +8,14 @@ const HomeScreen = (props) => {
       <Pressable style={({ pressed }) => pressed && styles.pressed} onPress={() => props.navigation.navigate('List')}>
         <Text>Go to List Demo</Text>
       </Pressable>
+      <Pressable style={({ pressed }) => pressed && styles.pressed} onPress={() => props.navigation.navigate('Image')}>
+        <Text>Go to Image Screen</Text>
+      </Pressable>
     </View>
   );
-};
+}
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   text: {
@@ -21,5 +25,3 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
 });
-
-export default HomeScreen;

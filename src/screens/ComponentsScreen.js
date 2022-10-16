@@ -1,7 +1,6 @@
-import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const ComponentsScreen = () => {
+function ComponentsScreen() {
   const greeting = 'Hi there!';
   const greeting2 = <Text>{greeting}</Text>;
 
@@ -12,12 +11,12 @@ const ComponentsScreen = () => {
       {greeting2}
     </View>
   );
-};
+}
+
+export default ComponentsScreen;
 
 const styles = StyleSheet.create({
   textStyle: {
     fontSize: 30,
   },
 });
-
-export default ComponentsScreen;
