@@ -25,6 +25,11 @@ function HomeScreen(props) {
         onPress={() => props.navigation.navigate('Color')}>
         <Text>Go to Color Screen</Text>
       </Pressable>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={() => props.navigation.navigate('Square')}>
+        <Text>Go to Square Screen</Text>
+      </Pressable>
     </View>
   );
 }
