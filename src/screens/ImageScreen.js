@@ -1,10 +1,10 @@
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import ImageDetail from '../components/ImageDetail';
-import beach from '../../assets/images/beach.jpg';
-import mountain from '../../assets/images/mountain.jpg';
-import forest from '../../assets/images/forest.jpg';
+import beach from '../assets/images/beach.jpg';
+import mountain from '../assets/images/mountain.jpg';
+import forest from '../assets/images/forest.jpg';
 
-function ImageScreen(props) {
+function ImageScreen() {
   return (
     <View>
       <ImageDetail title="Forest" image={forest} score={7} />
@@ -15,5 +15,3 @@ function ImageScreen(props) {
 }
 
 export default ImageScreen;
-
-const styles = StyleSheet.create({});
