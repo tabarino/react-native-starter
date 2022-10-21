@@ -7,18 +7,28 @@ const COLOR_INCREMENT = 15;
 function reducer(state, action) {
   switch (action.colorToChange) {
     case 'red': {
-      return { ...state, red: state.red + action.amount };
+      if (!(state.red + action.amount > 255) && !(state.red + action.amount < 0)) {
+        return { ...state, red: state.red + action.amount };
+      }
+      break;
     }
     case 'green': {
-      return { ...state, green: state.green + action.amount };
+      if (!(state.green + action.amount > 255) && !(state.green + action.amount < 0)) {
+        return { ...state, green: state.green + action.amount };
+      }
+      break;
     }
     case 'blue': {
-      return { ...state, blue: state.blue + action.amount };
+      if (!(state.blue + action.amount > 255) && !(state.blue + action.amount < 0)) {
+        return { ...state, blue: state.blue + action.amount };
+      }
+      break;
     }
     default: {
-      return state;
+      break;
     }
   }
+  return state;
 }
 
 function SquareScreen() {
