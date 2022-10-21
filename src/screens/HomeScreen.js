@@ -4,7 +4,7 @@ function HomeScreen(props) {
   return (
     <View>
       <Text style={styles.text}>Home Screen</Text>
-      <Button title="Go to Components Demo" onPress={() => props.navigation.navigate('Components')} />
+      <Button title='Go to Components Demo' onPress={() => props.navigation.navigate('Components')} />
       <Pressable
         style={({ pressed }) => [styles.button, pressed && styles.pressed]}
         onPress={() => props.navigation.navigate('List')}>
@@ -29,6 +29,11 @@ function HomeScreen(props) {
         style={({ pressed }) => [styles.button, pressed && styles.pressed]}
         onPress={() => props.navigation.navigate('Square')}>
         <Text>Go to Square Screen</Text>
+      </Pressable>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={() => props.navigation.navigate('Text')}>
+        <Text>Go to Text Screen</Text>
       </Pressable>
     </View>
   );
