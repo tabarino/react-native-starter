@@ -35,6 +35,11 @@ function HomeScreen(props) {
         onPress={() => props.navigation.navigate('Text')}>
         <Text>Go to Text Screen</Text>
       </Pressable>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={() => props.navigation.navigate('Box')}>
+        <Text>Go to Box Screen</Text>
+      </Pressable>
     </View>
   );
 }
